@@ -54,7 +54,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
                 key={movie.id} 
                 onClick ={() => handleClick(movie)}
                 class={`row_poster ${isLargeRow && "row__posterLarge"}` }
-                src={`${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path}`} alt={movie.name} />
+                src={`${base_url}${isLargeRow ? movie.poster_path : movie.poster_path}`} alt={movie.name} />
             ))}
             </div>
             {trailerUrl && <YouTube videoId={trailerUrl} opts={opts}/>}
